@@ -1,0 +1,96 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Credit Card Defaulter Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Credit Card Defaulter Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <textarea class="form-control" name="LIMIT_BAL" placeholder="Enter LIMIT BALANCE"></textarea> 
+        </div>
+
+        <div class="mb-2">
+            <label class="form-label">SEX</label>
+            <select class="form-control" name="SEX" placeholder="Enter you Gender" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value='1'>
+                    Male
+                </option>
+                <option value='2'>
+                    female
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">EDUCATION</label>
+            <select class="form-control" name="EDUCATION" placeholder="Enter you EDUCATION" required>
+                <option class="placeholder" selected disabled value="">Select EDUCATION</option>
+                <option value='1'>
+                    graduate school 
+                </option>
+                <option value='2'>
+                    university
+                </option>
+                <option value='3'>
+                    high school
+                </option>
+                <option value='4'>
+                    others 
+                </option>
+                <option value='5'>
+                    unknown 
+                </option>
+                <option value='6'>
+                    unknown
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">MARRIAGE</label>
+            <select class="form-control" name="MARRIAGE"
+                placeholder="Enter MARRIAGE" required>
+                <option class="placeholder" selected disabled value="">Select MARRIAGE</option>
+                <option value='1' >
+                    married
+                </option>
+                <option value='2'>
+                    single
+                </option>
+                <option value='3'>
+                    others
+                </option>
+            </select>
+        </div>
+        <div>
+             <textarea class="form-control" name="AGE" placeholder="Enter AGE"></textarea> 
+            <textarea class="form-control" name="PAY_1" placeholder="Enter PAY_1"></textarea>     
+            <textarea class="form-control" name="PAY_2" placeholder="Enter PAY_2"></textarea>
+            <textarea class="form-control" name="PAY_3" placeholder="Enter PAY_3"></textarea>
+            <textarea class="form-control" name="PAY_4" placeholder="Enter PAY_4"></textarea>
+            <textarea class="form-control" name="PAY_5" placeholder="Enter PAY_5"></textarea>
+            <textarea class="form-control" name="PAY_6" placeholder="Enter PAY_6"></textarea>
+            <textarea class="form-control" name="BILL_AMT1" placeholder="Enter BILL_AMT1"></textarea>
+            <textarea class="form-control" name="BILL_AMT2" placeholder="Enter BILL_AMT2"></textarea>
+            <textarea class="form-control" name="BILL_AMT3" placeholder="Enter BILL_AMT3"></textarea>
+            <textarea class="form-control" name="BILL_AMT4" placeholder="Enter BILL_AMT4"></textarea>
+            <textarea class="form-control" name="BILL_AMT5" placeholder="Enter BILL_AMT5"></textarea>
+            <textarea class="form-control" name="BILL_AMT6" placeholder="Enter BILL_AMT6"></textarea>
+            <textarea class="form-control" name="AGPAY_AMT1" placeholder="Enter PAY_AMT1"></textarea>
+            <textarea class="form-control" name="PAY_AMT2" placeholder="Enter PAY_AMT2"></textarea>
+            <textarea class="form-control" name="PAY_AMT3" placeholder="Enter PAY_AMT3"></textarea>
+            <textarea class="form-control" name="PAY_AMT4" placeholder="Enter PAY_AMT4"></textarea>
+            <textarea class="form-control" name="PAY_AMT5" placeholder="Enter PAY_AMT5"></textarea>
+            <textarea class="form-control" name="PAY_AMT6" placeholder="Enter PAY_AMT6"></textarea>        
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Prediction" required />
+        </div>
+    </form>
+    <h2>
+       The prediction is {{ results }}
+    </h2>
+   <body>
+</html>
